@@ -2,10 +2,10 @@ Ruby bindings for Upwork API (OAuth2)
 ============
 
 [![License](http://img.shields.io/packagist/l/upwork/php-upwork.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Gem Version](https://badge.fury.io/rb/upwork-api.svg)](http://badge.fury.io/rb/upwork-api)
-[![GitHub release](https://img.shields.io/github/release/upwork/ruby-upwork.svg)](https://github.com/upwork/ruby-upwork/releases)
-[![Build Status](https://travis-ci.org/upwork/ruby-upwork.svg)](https://travis-ci.org/upwork/ruby-upwork)
-[![Stories in Ready](http://badge.waffle.io/upwork/ruby-upwork.png)](http://waffle.io/upwork/ruby-upwork)
+[![Gem Version](https://badge.fury.io/rb/ruby-upwork-oauth2.svg)](http://badge.fury.io/rb/ruby-upwork-oauth2)
+[![GitHub release](https://img.shields.io/github/release/upwork/ruby-upwork-oauth2.svg)](https://github.com/upwork/ruby-upwork-oauth2/releases)
+[![Build Status](https://travis-ci.org/upwork/ruby-upwork-oauth2.svg)](https://travis-ci.org/upwork/ruby-upwork-oauth2)
+[![Stories in Ready](http://badge.waffle.io/upwork/ruby-upwork-oauth2.png)](http://waffle.io/upwork/ruby-upwork-oauth2)
 
 # Upwork::Api
 
@@ -60,7 +60,7 @@ To integrate this library you need to have:
 
 Add this line to your application's Gemfile:
 
-    gem 'upwork-api'
+    gem 'ruby-upwork-oauth2'
 
 And then execute:
 
@@ -68,7 +68,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install upwork-api
+    $ gem install ruby-upwork-oauth2
 
 ## Usage
 

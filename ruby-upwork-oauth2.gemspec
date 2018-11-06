@@ -4,16 +4,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'upwork/api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "upwork-api"
+  spec.name          = "ruby-upwork-oauth2"
   spec.version       = Upwork::Api::VERSION
   spec.authors       = ["Maksym Novozhylov"]
   spec.email         = ["mnovozhilov@upwork.com"]
-  spec.summary       = %q{Ruby bindings for Upwork API.}
-  spec.description   = %q{Ruby bindings for Upwork API makes your life easier due to working with your Upwork's data.}
+  spec.summary       = %q{Ruby bindings for Upwork API (OAuth2).}
+  spec.description   = %q{Ruby bindings for Upwork API (OAuth2) makes your life easier due to working with your Upwork's data.}
   spec.homepage      = "http://developers.upwork.com"
   spec.license       = "Apache-2.0"
 
-  spec.add_dependency 'oauth', '>= 0.4.7'
+  spec.add_dependency 'oauth2', '~> 1.4'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "mocha"
-  spec.add_development_dependency "test-unit"
+  spec.add_development_dependency "rake", "~> 0"
+  spec.add_development_dependency "mocha", "~> 0"
+  spec.add_development_dependency "test-unit", "~> 0"
 end
