@@ -1,0 +1,20 @@
+language: ruby
+script: rake
+rvm:
+  - 2.0.0
+  - 2.1.0
+  - 2.3.0
+  - 2.4.3
+  - 2.5.0
+  - jruby-head
+  - ruby-head
+install: gem install oauth test-unit mocha
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+  fast_finish: true
+notifications:
+  email:
+    recipients:
+      - apisupport@upwork.com
+    on_failure: change
