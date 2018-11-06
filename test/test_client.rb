@@ -24,7 +24,7 @@ class ConfigTest < Test::Unit::TestCase
     client = Upwork::Api::Client.new(config)
     client.epoint = 'gds'
 
-    assert_equal '/api/v3/oauth2/authorize',client.url_auth
+    assert_equal '/ab/account-security/oauth2/authorize',client.url_auth
     assert_equal '/api/v3/oauth2/token',client.url_rtoken
     assert_equal '/api/v3/oauth2/token',client.url_atoken
     assert_equal 'gds',client.epoint 

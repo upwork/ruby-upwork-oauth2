@@ -8,7 +8,7 @@ rvm:
   - 2.5.0
   - jruby-head
   - ruby-head
-install: gem install oauth test-unit mocha
+install: gem install oauth2 test-unit mocha
 matrix:
   allow_failures:
     - rvm: ruby-head
