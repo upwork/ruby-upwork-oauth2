@@ -43,7 +43,8 @@ module Upwork
           @config.client_secret,
 	  :site => Upwork::Api::BASE_HOST,
 	  :authorize_url => @url_auth,
-	  :token_url => @url_atoken
+	  :token_url => @url_atoken,
+	  :connection_opts => { :headers => {'User-Agent:' => 'Github Upwork API Ruby Client' }}
 	)
       end
       
