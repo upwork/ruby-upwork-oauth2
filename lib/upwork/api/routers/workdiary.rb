@@ -27,6 +27,16 @@ module Upwork
           @client.epoint = ENTRY_POINT 
         end
         
+        # Get Workdiary by Company
+        # Arguments:
+        #  company: (String)
+        #  date: (String)
+        #  params: (Hash)
+        def get(company, date, params = {})
+          $LOG.i "running " + __method__.to_s
+          @client.get '/team/v3/workdiaries/companies/' + company + '/' + date, params
+        end
+
         # Get Work Diary by Contract
         # Arguments:
         #  contract: (String)
@@ -34,7 +44,7 @@ module Upwork
         #  params: (Hash)
         def get_by_contract(contract, date, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/team/v2/workdiaries/contracts/' + contract + '/' + date, params
+          @client.get '/team/v3/workdiaries/contracts/' + contract + '/' + date, params
         end
       end
     end
