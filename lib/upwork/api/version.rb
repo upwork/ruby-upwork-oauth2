@@ -13,6 +13,6 @@
 
 module Upwork # :nodoc:
   module Api
-    VERSION = "2.1.1"
+    VERSION = "2.1.2"
   end
 end

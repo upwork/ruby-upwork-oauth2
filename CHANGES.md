@@ -1,5 +1,12 @@
 # Release History
 
+## 2.1.2
+* Add Room Messages API
+* Sync-up routers with OAuth1 version
+
+## 2.2.1
+* Resolve a vulnarable dependency
+
 ## 2.1.0
 * Add Specialties API
 * Add Skills V2 API
