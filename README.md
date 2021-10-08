@@ -4,8 +4,7 @@ Ruby bindings for Upwork API (OAuth2)
 [![License](https://img.shields.io/github/license/upwork/ruby-upwork-oauth2)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Gem Version](https://badge.fury.io/rb/ruby-upwork-oauth2.svg)](http://badge.fury.io/rb/ruby-upwork-oauth2)
 [![GitHub release](https://img.shields.io/github/release/upwork/ruby-upwork-oauth2.svg)](https://github.com/upwork/ruby-upwork-oauth2/releases)
-[![Build Status](https://travis-ci.org/upwork/ruby-upwork-oauth2.svg)](https://travis-ci.org/upwork/ruby-upwork-oauth2)
-[![Stories in Ready](http://badge.waffle.io/upwork/ruby-upwork-oauth2.png)](http://waffle.io/upwork/ruby-upwork-oauth2)
+[![Build Status](https://github.com/upwork/ruby-upwork-oauth2/workflows/build/badge.svg)](https://github.com/upwork/ruby-upwork-oauth2/actions)
 
 # Upwork::Api
 
