@@ -8,23 +8,31 @@
 # limitations under the License.
 #
 # Author::    Maksym Novozhylov (mnovozhilov@upwork.com)
-# Copyright:: Copyright 2014(c) Upwork.com
+# Copyright:: Copyright 2021(c) Upwork.com
 # License::   See LICENSE.txt and TOS - https://developers.upwork.com/api-tos.html
 
-require 'oauth2'
-
-require 'upwork/api/version'
-require 'upwork/api/logger'
-require 'upwork/api/config'
-require 'upwork/api/client'
-
-module Upwork # :nodoc:
+module Upwork
   module Api
-    # define some constants
-    BASE_HOST       = 'https://www.upwork.com'
-    DEFAULT_EPOINT  = 'api'
-    GQL_EPOINT      = 'https://api.upwork.com/graphql'
-    
-    $LOG = Logger.new
+    module Routers
+      # Execute GraphQL requests
+      class Graphql
+        ENTRY_POINT = 'graphql'
+        
+        # Init
+        #
+        # Arguments:
+        #  client: (Client)
+        def initialize(client)
+          @client = client
+          @client.epoint = ENTRY_POINT 
+        end
+        
+        # Execute GraphQL request
+        def execute(params)
+          $LOG.i "running " + __method__.to_s
+          @client.post '', params
+        end
+      end
+    end
   end
 end
