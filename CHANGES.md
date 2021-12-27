@@ -1,5 +1,8 @@
 # Release History
 
+## 2.1.4
+* Add GraphQL support
+
 ## 2.1.3
 * Send Message to a Batch of Rooms API
 

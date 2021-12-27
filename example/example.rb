@@ -5,6 +5,7 @@ $:.unshift '../lib'
 $LOAD_PATH << File.dirname(__FILE__)
 
 require 'upwork/api'
+require 'upwork/api/routers/graphql'
 require 'upwork/api/routers/auth'
 require 'upwork/api/routers/messages'
 require 'upwork/api/routers/reports/time'
@@ -42,6 +43,24 @@ end
 # old token accordingly in your security storage. Call client.get_actual_config
 # periodically to sync-up the data
 @actual_access_token_data = client.get_actual_config
+
+# execute graphql request
+#client.set_org_uid_header('1234567890') # Organization UID (optional)
+#graphql = Upwork::Api::Routers::Graphql.new(client)
+#params = {
+#  'query' => "query {
+#      user {
+#        id
+#        nid
+#        rid
+#      }
+#      organization {
+#        id
+#      }
+#    }"
+#}
+#data = graphql.execute params
+#p data['data']['user']['id']
 
 # get my auth data
 #auth = Upwork::Api::Routers::Auth.new(client)

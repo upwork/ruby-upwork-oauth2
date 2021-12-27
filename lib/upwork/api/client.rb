@@ -37,6 +37,7 @@ module Upwork
         @config = config
         @epoint = Upwork::Api::DEFAULT_EPOINT
 	@url_auth, @url_rtoken, @url_atoken = URI_AUTH, URI_RTOKEN, URI_ATOKEN
+        @tenant_id = nil
 
 	@oauth2_client = OAuth2::Client.new(
           @config.client_id,
@@ -72,6 +73,11 @@ module Upwork
       # Get actual client config
       def get_actual_config
         @config
+      end
+
+      # Configure X-Upwork-API-TenantId header
+      def set_org_uid_header(tenant_id)
+        @tenant_id = tenant_id
       end
       
       # Run GET request
@@ -117,7 +123,7 @@ module Upwork
       
       # Get URI with :format
       def get_uri_with_format(uri) # :nodoc:
-        (@epoint) + uri + ((@epoint == 'api') ? '.' + DATA_FORMAT : '')
+        (@epoint == 'graphql') ? Upwork::Api::GQL_EPOINT : ((@epoint) + uri + ((@epoint == 'api') ? '.' + DATA_FORMAT : ''))
       end
       
       private
@@ -172,7 +178,15 @@ module Upwork
           url = get_url_with_params get_uri_with_format(uri), params
           response = @access_token.get(url).body
         when :post, :put, :delete
-          response = @access_token.post(get_uri_with_format(uri), {body: params}).body
+          if @epoint == 'graphql'
+            data = {:body => params.to_json, :headers => {'Content-Type' => 'application/json'}}
+            if @tenant_id
+              data[:headers]['X-Upwork-API-TenantId'] = @tenant_id
+            end
+          else
+            data = {body: params}
+          end
+          response = @access_token.post(get_uri_with_format(uri), data).body
         else
           raise ArgumentError, "Don't know how to handle http method: :#{method.to_s}"
         end
