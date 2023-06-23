@@ -16,6 +16,7 @@ config = Upwork::Api::Config.new({
   'client_id'     => 'xxxxxxxx',
   'client_secret' => 'xxxxxxxx',
   'redirect_uri'  => 'https://a.callback.url',
+#  'grant_type'    => 'client_credentials' # Client Credentials Grant
 #  'access_token'  => 'xxxxxxxx',
 #  'refresh_token' => 'xxxxxxxx',
 #  'expires_in'    => '86399'
@@ -26,6 +27,7 @@ config = Upwork::Api::Config.new({
 # setup client
 client = Upwork::Api::Client.new(config)
 
+# Code Authorization Grant
 # run authorization in case we haven't done it yet
 # and do not have an access and refresh token pair
 if !config.access_token and !config.refresh_token
@@ -36,6 +38,11 @@ if !config.access_token and !config.refresh_token
   authz_code = gets.strip
   @token = client.get_access_token(authz_code)
   # store access token data in safe place!
+end
+
+# Client Credentials Grant
+if !config.access_token
+  @token = client.get_access_token
 end
 
 # WARNING: the access token will be refreshed automatically for you

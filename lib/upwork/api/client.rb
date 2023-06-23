@@ -60,10 +60,16 @@ module Upwork
       #
       # Arguments:
       #  authz_code: (String)
-      def get_access_token(authz_code)
-        $LOG.i "getting access and refresh token pair"
-	@access_token = @oauth2_client.auth_code.get_token(authz_code, :redirect_uri => @config.redirect_uri)
-        $LOG.i "got access and refresh token pair", @access_token
+      def get_access_token(authz_code = nil)
+        if @config.grant_type == 'client_credentials'
+          $LOG.i "getting access token"
+	  @access_token = @oauth2_client.client_credentials.get_token
+          $LOG.i "got access token", @access_token
+        else
+          $LOG.i "getting access and refresh token pair"
+	  @access_token = @oauth2_client.auth_code.get_token(authz_code, :redirect_uri => @config.redirect_uri)
+          $LOG.i "got access and refresh token pair", @access_token
+        end
 
 	refresh_config_from_access_token
 

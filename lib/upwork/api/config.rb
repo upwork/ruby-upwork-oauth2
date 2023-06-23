@@ -18,14 +18,14 @@ module Upwork
       @@debug = false;
       
       attr_accessor :access_token, :refresh_token, :expires_in, :expires_at
-      attr_reader :client_id, :client_secret, :redirect_uri
+      attr_reader :client_id, :client_secret, :redirect_uri, :grant_type
       
       # Init config object
       #
       # Arguments:
       #  config: (Hash)
       def initialize(config = {})
-        @client_id, @client_secret, @redirect_uri = config['client_id'], config['client_secret'], config['redirect_uri']
+        @client_id, @client_secret, @redirect_uri, @grant_type = config['client_id'], config['client_secret'], config['redirect_uri'], config['grant_type']
         @access_token, @refresh_token, @expires_in, @expires_at = config['access_token'], config['refresh_token'], config['expires_in'], config['expires_at']
         @@debug = config['debug']
 
