@@ -33,7 +33,7 @@ module Upwork
           # Arguments:
           #  engagement_ref: (String)
           def get_specific(engagement_ref)
-            @client.get '/tasks/v2/tasks/contracts/' + engagement_ref
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Assign engagements to the list of activities
@@ -44,7 +44,7 @@ module Upwork
           #  engagement: (String)
           #  params: (Hash)
           def assign(company, team, engagement, params)
-            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/engagements/' + engagement + '/tasks', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           # Assign to specific engagement the list of activities
@@ -53,7 +53,7 @@ module Upwork
           #  engagement_ref: (String)
           #  params: (Hash)
           def assign_to_engagement(engagement_ref, params)
-            @client.put '/tasks/v2/tasks/contracts/' + engagement_ref, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         
         end

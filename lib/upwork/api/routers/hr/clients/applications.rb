@@ -35,7 +35,7 @@ module Upwork
             #  params: (Hash)
             def get_list(params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/hr/v4/clients/applications', params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
             
             # Get specific application
@@ -45,7 +45,7 @@ module Upwork
             #  params: (Hash)
             def get_specific(reference, params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/hr/v4/clients/applications/' + reference, params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
           end
         end

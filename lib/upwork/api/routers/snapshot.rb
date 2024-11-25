@@ -34,7 +34,7 @@ module Upwork
         #  ts: (String)
         def get_by_contract(contract, ts)
           $LOG.i "running " + __method__.to_s
-          @client.get '/team/v3/snapshots/contracts/' + contract + '/' + ts
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Update snapshot by specific contract
@@ -45,7 +45,7 @@ module Upwork
         #  params: (Hash)
         def update_by_contract(contract, ts, params)
           $LOG.i "running " + __method__.to_s
-          @client.put '/team/v3/snapshots/contracts/' + contract + '/' + ts, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Delete snapshot by specific contract
@@ -54,7 +54,7 @@ module Upwork
         #  ts: (String)
         def delete_by_contract(contract, ts)
           $LOG.i "running " + __method__.to_s
-          @client.delete '/team/v3/snapshots/contracts/' + contract + '/' + ts
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
       end
     end

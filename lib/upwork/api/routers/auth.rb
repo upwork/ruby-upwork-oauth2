@@ -30,7 +30,7 @@ module Upwork
         # Get info of authenticated user
         def get_user_info
           $LOG.i "running " + __method__.to_s
-          @client.get '/auth/v1/info'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
       end
     end

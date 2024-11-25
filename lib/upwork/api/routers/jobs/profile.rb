@@ -34,7 +34,7 @@ module Upwork
           #  key: (String)
           def get_specific(key)
             $LOG.i "running " + __method__.to_s
-            @client.get '/profiles/v1/jobs/' + key
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

@@ -34,7 +34,7 @@ module Upwork
           #  params: (Hash)
           def get_list(params)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/jobs', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get specific job by key
@@ -43,7 +43,7 @@ module Upwork
           #  key: (String)
           def get_specific(key)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/jobs/' + key
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Post a new job
@@ -52,7 +52,7 @@ module Upwork
           #  params: (Hash)
           def post_job(params)
             $LOG.i "running " + __method__.to_s
-            @client.post '/hr/v2/jobs', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Edit existent job
@@ -61,7 +61,7 @@ module Upwork
           #  params: (Hash)
           def edit_job(key, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v2/jobs/' + key, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Delete existent job
@@ -70,7 +70,7 @@ module Upwork
           #  params: (Hash)
           def delete_job(key, params)
             $LOG.i "running " + __method__.to_s
-            @client.delete '/hr/v2/jobs/' + key, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

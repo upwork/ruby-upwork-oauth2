@@ -31,7 +31,7 @@ module Upwork
           # Get Companies Info
           def get_list
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/companies'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get Specific Company
@@ -40,7 +40,7 @@ module Upwork
           #  company_reference: (String)
           def get_specific(company_reference)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/companies/' + company_reference
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get Teams in Company
@@ -49,7 +49,7 @@ module Upwork
           #  company_reference: (String)
           def get_teams(company_reference)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/companies/' + company_reference + '/teams'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get Users in Company
@@ -58,7 +58,7 @@ module Upwork
           #  company_reference: (String)
           def get_users(company_reference)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/companies/' + company_reference + '/users'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

@@ -54,7 +54,7 @@ module Upwork
           #  team: (String)
           #  params: (Hash)
           def add_activity(company, team, params)
-            @client.post '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/tasks', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           # Update specific oTask/Activity record within a team
@@ -65,7 +65,7 @@ module Upwork
           #  code: (String)
           #  params: (Hash)
           def update_activities(company, team, code, params)
-            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/tasks/' + code, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           # Archive specific oTask/Activity record within a team
@@ -75,7 +75,7 @@ module Upwork
           #  team: (String)
           #  code: (String)
           def archive_activities(company, team, code)
-            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/archive/' + code
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           # Unarchive specific oTask/Activity record within a team
@@ -85,7 +85,7 @@ module Upwork
           #  team: (String)
           #  code: (String)
           def unarchive_activities(company, team, code)
-            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/unarchive/' + code
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           # Update a group of oTask/Activity records within a company
@@ -94,7 +94,7 @@ module Upwork
           #  company: (String)
           #  params: (Hash)
           def update_batch(company, params)
-            @client.put '/otask/v1/tasks/companies/' + company + '/tasks/batch', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
 
           private

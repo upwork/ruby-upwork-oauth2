@@ -35,7 +35,7 @@ module Upwork
           #  params: (Hash)
           def suspend_contract(reference, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v2/contracts/' + reference + '/suspend', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Restart Contract
@@ -45,7 +45,7 @@ module Upwork
           #  params: (Hash)
           def restart_contract(reference, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v2/contracts/' + reference + '/restart', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # End Contract
@@ -55,7 +55,7 @@ module Upwork
           #  params: (Hash)
           def end_contract(reference, params)
             $LOG.i "running " + __method__.to_s
-            @client.delete '/hr/v2/contracts/' + reference, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

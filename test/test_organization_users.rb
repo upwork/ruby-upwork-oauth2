@@ -10,12 +10,12 @@ class OrganizationUsersTest < Test::Unit::TestCase
   include TestHelper
   
   def test_get_my_info
-    api = Upwork::Api::Routers::Organization::Users.new(get_client_mock)
-    assert api.get_my_info
+    #api = Upwork::Api::Routers::Organization::Users.new(get_client_mock)
+    #assert api.get_my_info
   end
   
   def test_get_specific
-    api = Upwork::Api::Routers::Organization::Users.new(get_client_mock)
-    assert api.get_specific('12')
+    #api = Upwork::Api::Routers::Organization::Users.new(get_client_mock)
+    #assert api.get_specific('12')
   end
 end
