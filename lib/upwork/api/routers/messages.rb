@@ -33,7 +33,7 @@ module Upwork
         #  params: (Hash)
         def get_rooms(company, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms', params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get a specific room information
@@ -44,7 +44,7 @@ module Upwork
         #  params: (Hash)
         def get_room_details(company, room_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms/' + room_id, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get messages from a specific room
@@ -55,7 +55,7 @@ module Upwork
         #  params: (Hash)
         def get_room_messages(company, room_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Get a specific room by offer ID
@@ -66,7 +66,7 @@ module Upwork
         #  params: (Hash)
         def get_room_by_offer(company, offer_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms/offers/' + offer_id, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get a specific room by application ID
@@ -77,7 +77,7 @@ module Upwork
         #  params: (Hash)
         def get_room_by_application(company, application_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms/applications/' + application_id, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get a specific room by contract ID
@@ -88,7 +88,7 @@ module Upwork
         #  params: (Hash)
         def get_room_by_contract(company, contract_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms/contracts/' + contract_id, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Create a new room
@@ -98,7 +98,7 @@ module Upwork
         #  params: (Hash)
         def create_room(company, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.post '/messages/v3/' + company + '/rooms', params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Send a message to a room
@@ -109,7 +109,7 @@ module Upwork
         #  params: (Hash)
         def send_message_to_room(company, room_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.post '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Send a message to a batch of rooms
@@ -119,7 +119,7 @@ module Upwork
         #  params: (Hash)
         def send_message_to_rooms(company, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.post '/messages/v3/' + company + '/stories/batch', params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Update a room settings
@@ -131,7 +131,7 @@ module Upwork
         #  params: (Hash)
         def update_room_settings(company, room_id, username, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.put '/messages/v3/' + company + '/rooms/' + room_id + '/users/' + username, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Update the metadata of a room
@@ -142,7 +142,7 @@ module Upwork
         #  params: (Hash)
         def update_room_metadata(company, room_id, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.put '/messages/v3/' + company + '/rooms/' + room_id, params
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
       end
     end

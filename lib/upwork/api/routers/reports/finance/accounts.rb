@@ -36,7 +36,7 @@ module Upwork
             #  params: (Hash)
             def get_owned(freelancer_reference, params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/finreports/v2/financial_account_owner/' + freelancer_reference, params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
             
             # Generate Financial Reports for a Specific Account
@@ -46,7 +46,7 @@ module Upwork
             #  params: (Hash)
             def get_specific(entity_reference, params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/finreports/v2/financial_accounts/' + entity_reference, params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
           end
         end

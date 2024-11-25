@@ -30,37 +30,37 @@ module Upwork
         # Get categories (v2)
         def get_categories_v2
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v2/metadata/categories'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get skills
         def get_skills
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/skills'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get skills V2
         def get_skills_v2(params)
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v2/metadata/skills'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Get specialties
         def get_specialties
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/specialties'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
         # Get regions
         def get_regions
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/regions'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get tests
         def get_tests
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/tests'
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
         
         # Get reasons
@@ -69,7 +69,7 @@ module Upwork
         #  params: (Hash)
         def get_reasons(params)
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/reasons', params;
+          raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
       end
     end

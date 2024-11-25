@@ -35,7 +35,7 @@ module Upwork
             #  params: (Hash)
             def get_list(params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/offers/v1/clients/offers', params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
             
             # Get specific offer
@@ -45,7 +45,7 @@ module Upwork
             #  params: (Hash)
             def get_specific(reference, params)
               $LOG.i "running " + __method__.to_s
-              @client.get '/offers/v1/clients/offers/' + reference, params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
             
             # Make an Offer
@@ -54,7 +54,7 @@ module Upwork
             #  params: (Hash)
             def make_offer(params)
               $LOG.i "running " + __method__.to_s
-              @client.post '/offers/v1/clients/offers', params
+              raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
             end
           end
         end

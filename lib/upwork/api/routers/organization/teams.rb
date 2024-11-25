@@ -31,7 +31,7 @@ module Upwork
           # Get Teams info
           def get_list
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/teams'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get Users in Team
@@ -40,7 +40,7 @@ module Upwork
           #  team_reference: (String)
           def get_users_in_team(team_reference)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/teams/' + team_reference + '/users'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

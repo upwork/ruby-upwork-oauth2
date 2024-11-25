@@ -34,7 +34,7 @@ module Upwork
           #  params: (Hash)
           def find(params)
             $LOG.i "running " + __method__.to_s
-            @client.get '/profiles/v2/search/jobs', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

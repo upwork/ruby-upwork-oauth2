@@ -31,7 +31,7 @@ module Upwork
           # Get user roles
           def get_all
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/userroles'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get by specific user
@@ -40,7 +40,7 @@ module Upwork
           #  reference: (String)
           def get_by_specific_user(user_reference)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v2/userroles/' + user_reference
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

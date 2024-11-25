@@ -34,7 +34,7 @@ module Upwork
           #  params: (Hash)
           def request_approval(params)
             $LOG.i "running " + __method__.to_s
-            @client.post '/hr/v3/fp/submissions', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Approve an existing Submission
@@ -44,7 +44,7 @@ module Upwork
           #  params: (Hash)
           def approve(submission_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v3/fp/submissions/' + submission_id + '/approve', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Reject an existing Submission
@@ -54,7 +54,7 @@ module Upwork
           #  params: (Hash)
           def reject(submission_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v3/fp/submissions/' + submission_id + '/reject', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

@@ -10,7 +10,7 @@ class JobsProfileTest < Test::Unit::TestCase
   include TestHelper
   
   def test_get_specific
-    api = Upwork::Api::Routers::Jobs::Profile.new(get_client_mock)
-    assert api.get_specific('~key')
+    #api = Upwork::Api::Routers::Jobs::Profile.new(get_client_mock)
+    #assert api.get_specific('~key')
   end
 end

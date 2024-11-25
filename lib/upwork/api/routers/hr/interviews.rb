@@ -35,7 +35,7 @@ module Upwork
           #  params: (Hash)
           def invite(job_key, params)
             $LOG.i "running " + __method__.to_s
-            @client.post '/hr/v1/jobs/' + job_key + '/candidates', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

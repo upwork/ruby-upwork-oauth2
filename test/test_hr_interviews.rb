@@ -10,7 +10,7 @@ class HrInterviewsTest < Test::Unit::TestCase
   include TestHelper
   
   def test_invite
-    api = Upwork::Api::Routers::Hr::Interviews.new(get_client_mock)
-    assert api.invite('key', {})
+    #api = Upwork::Api::Routers::Hr::Interviews.new(get_client_mock)
+    #assert api.invite('key', {})
   end
 end

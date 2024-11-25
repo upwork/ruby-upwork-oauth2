@@ -78,7 +78,7 @@ module Upwork
           #  params: (Hash)
           def get_by_freelancer_limited(freelancer_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.get '/timereports/v1/providers/' + freelancer_id + '/hours', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Generating Freelancer's Specific Reports (with financial info)
@@ -88,7 +88,7 @@ module Upwork
           #  params: (Hash)
           def get_by_freelancer_full(freelancer_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.get '/timereports/v1/providers/' + freelancer_id, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           private
@@ -105,7 +105,7 @@ module Upwork
                 url = '/agencies/' + agency
             end
     
-            @client.get '/timereports/v1/companies/' + company + url, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end

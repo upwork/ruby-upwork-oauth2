@@ -34,7 +34,7 @@ module Upwork
           #  contract_id: (String)
           def get_active_milestone(contract_id)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v3/fp/milestones/statuses/active/contracts/' + contract_id
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Get active Milestone for specific Contract
@@ -43,7 +43,7 @@ module Upwork
           #  milestone_id: (String)
           def get_submissions(milestone_id)
             $LOG.i "running " + __method__.to_s
-            @client.get '/hr/v3/fp/milestones/' + milestone_id + '/submissions'
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Create a new Milestone
@@ -52,7 +52,7 @@ module Upwork
           #  params: (Hash)
           def create(params)
             $LOG.i "running " + __method__.to_s
-            @client.post '/hr/v3/fp/milestones', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Edit an existing Milestone
@@ -62,7 +62,7 @@ module Upwork
           #  params: (Hash)
           def edit(milestone_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v3/fp/milestones/' + milestone_id, params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Activate an existing Milestone
@@ -72,7 +72,7 @@ module Upwork
           #  params: (Hash)
           def activate(milestone_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v3/fp/milestones/' + milestone_id + '/activate', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Approve an existing Milestone
@@ -82,7 +82,7 @@ module Upwork
           #  params: (Hash)
           def approve(milestone_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.put '/hr/v3/fp/milestones/' + milestone_id + '/approve', params
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
           # Delete an existing Milestone
@@ -91,7 +91,7 @@ module Upwork
           #  milestone_id: (String)
           def delete(milestone_id)
             $LOG.i "running " + __method__.to_s
-            @client.delete '/hr/v3/fp/milestones/' + milestone_id
+            raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
         end
       end
