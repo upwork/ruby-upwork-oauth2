@@ -29,6 +29,9 @@ jobs:
       # step 2: install dependencies
       - name: Install dependencies
         run: gem install oauth2 test-unit mocha
-      # step 3: run test
+      # step 3: install dependencies
+      - name: Install bundler dependencies
+        run: gem install bundler -v 2.4.22
+      # step 4: run test
       - name: Run tests
         run: rake test
