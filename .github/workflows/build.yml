@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        ruby: [ '2.7.3', '2.6.7', '3.0.1' ]
+        ruby: [ '3.0.1', '3.1.6', '3.2.5', '3.3.6' ]
 
     name: Ruby ${{ matrix.ruby }}
     steps:
@@ -29,9 +29,6 @@ jobs:
       # step 2: install dependencies
       - name: Install dependencies
         run: gem install oauth2 test-unit mocha
-      # step 3: install dependencies
-      - name: Install bundler dependencies
-        run: gem install bundler -v 2.4.22
-      # step 4: run test
+      # step 3: run test
       - name: Run tests
         run: rake test
