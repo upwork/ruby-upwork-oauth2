@@ -122,7 +122,7 @@ module Upwork
           raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
         end
 
-        # Update a room settings
+        # Update room settings
         #
         # Arguments:
         #  company: (String)

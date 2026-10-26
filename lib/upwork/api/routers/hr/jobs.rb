@@ -55,7 +55,7 @@ module Upwork
             raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
-          # Edit existent job
+          # Edit an existing job
           #
           # Arguments:
           #  params: (Hash)
@@ -64,7 +64,7 @@ module Upwork
             raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
-          # Delete existent job
+          # Delete an existing job
           #
           # Arguments:
           #  params: (Hash)

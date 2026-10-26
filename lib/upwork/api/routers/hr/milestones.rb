@@ -37,7 +37,7 @@ module Upwork
             raise StandardError.new "The legacy API was deprecated. Please, use GraphQL call - see example in this library."
           end
           
-          # Get active Milestone for specific Contract
+          # Get all submissions for the active Milestone
           #
           # Arguments:
           #  milestone_id: (String)
